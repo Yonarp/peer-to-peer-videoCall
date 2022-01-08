@@ -21,4 +21,54 @@
         -webkit-text-fill-color: transparent;
         
     }
+
+    &-para{
+        width : 40%;
+        font-weight: 200;
+        color: aliceblue;
+        font-size: 1.3rem;
+        word-spacing: .2rem;
+
+    }
+    &-text{
+        position: relative;
+        width:40%;
+        margin-top:3rem;
+    }
+
+    &-input{
+        padding: 1rem 1rem;
+        font-size: 1.3rem;
+        appearance: none;
+        max-width: 100%;
+        overflow: hidden;
+        height: 100%;
+        transition: all .2s ease;
+        border: none;
+        border-bottom: 1px solid #05e8ba;
+        background: none;
+        outline: none;
+        color: aliceblue;
+        &:valid + .landing-page-placeholder,
+        &:focus + .landing-page-placeholder{
+           // left: -120px;
+           // top: 10px;
+            background: -webkit-linear-gradient(45deg,#087ee1, #05e8ba);
+            background-clip: text;
+            font-size: 1.5rem;
+            -webkit-text-fill-color: transparent;
+        }
+        &:focus , &:valid{
+        margin-left: 10rem;
+        }
+    }
+    &-placeholder{
+        transition: all .2s ease-in-out;
+        position: absolute;
+        color: gray;
+        font-size: 1rem;
+        left: 0;
+        top: calc(20% + 10px);
+    }
+
 }
