@@ -1,5 +1,5 @@
 import React from "react";
-import {BrowserRouter, Route,Routes, Switch} from "react-router-dom";
+import {BrowserRouter, Route,Routes} from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
 import VideoCallPage from "./pages/VideoCallPage";
 

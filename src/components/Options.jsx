@@ -1,4 +1,3 @@
-import { TextField } from "@material-ui/core";
 import React, { useState, useContext } from "react";
 import { SocketContext } from "../SocketContext";
 
@@ -8,13 +7,13 @@ const Options = ({ children }) => {
   const [idToCall, setIdToCall] = useState("");
   return (
     <div>
-      <TextField
+      <input
         label="enter Your name here"
         value={name}
         onChange={(e) => {
           setName(e.target.value);
         }}
-      ></TextField>
+      ></input>
       <h2>{me}</h2>
       <h2>Make a call</h2>
       <input
