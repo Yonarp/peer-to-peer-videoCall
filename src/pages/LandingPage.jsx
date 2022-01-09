@@ -13,6 +13,21 @@ function LandingPage() {
       animationData: animationData
     });
   })
+  const change = () => {
+    document.getElementById("anim").classList.remove("landing-page-button-arrow");
+    document.getElementById("anim").classList.add("landing-page-button-arrow-2");
+  }
+
+  const changeAgain = () => {
+    document.getElementById("anim").classList.remove("landing-page-button-arrow-2");
+    document.getElementById("anim").classList.add("landing-page-button-arrow");
+  }
+
+  const clickSound = () => {
+    console.log("click");
+    const audio = new Audio(require("../sound/click2.wav"));
+    audio.play();
+  }
 
   return (
     <div className="landing">
@@ -26,7 +41,7 @@ function LandingPage() {
           <input type="text" className="landing-page-input" required></input>
           <span className="landing-page-placeholder"> Enter Name</span>
         </div>
-        <button  className="landing-page-button">Hello</button>
+        <button  className="landing-page-button" onMouseEnter={() => { change()}} onMouseLeave={() => {changeAgain()}} onClick={() =>{clickSound()}}>Next <span className="landing-page-button-arrow" id="anim">&nbsp; &rarr; </span></button>
       </div>
       <div className="animation"></div>
     </div>

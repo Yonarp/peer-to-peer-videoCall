@@ -85,7 +85,7 @@
     }
     &-button{
         position:absolute;
-        bottom: -20%;
+        bottom: -35%;
         right: 30%;
         margin-top: 2rem;
         width: 15%;
@@ -96,16 +96,47 @@
         border: none;
         border-radius:2rem;
         outline: none;
+        
         cursor: pointer;
         transition: all .2s ease;
         &:hover{
            transform: translateY(-5px);
            box-shadow: -.2rem 1rem 0.5rem rgba(15, 200, 176, 0.2);
         }
+
         &:active{
             transform: translateY(-2px);
             box-shadow: -.3rem .5rem 0.5rem rgba(15, 200, 176, 0.2);
         }
+        &-arrow{
+            width:auto;
+            height: inherit;
+            display:inline-block;
+            transition: all .2s ease;
+            animation:arrow 1.5s ease-out infinite;
+            }
+            &-2{
+                 width:auto;
+                height: inherit;
+                display:inline-block;
+                transition: all .2s ease;
+                transform: translateX(5px);
+
+            }
+        }
+          
     }
 
-}
+
+
+@keyframes arrow{
+    0%{
+        transform: translateX(0px);
+    }
+    50%{
+        transform: translateX(10px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+    }
