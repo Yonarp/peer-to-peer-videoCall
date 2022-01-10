@@ -37,9 +37,18 @@ function LandingPage() {
   return (
     <div className="main">
       <div className="landing">
+        <div className="landing-elements landing-elements-1"></div>
+        <div className="landing-elements landing-elements-2"></div>
+        <div className="landing-elements landing-elements-3"></div>
+        <div className="landing-elements landing-elements-4"></div>
+        <div className="landing-elements landing-elements-5"></div>
+        <div className="landing-elements landing-elements-6"></div>
+        <div className="landing-elements landing-elements-7"></div>
+        <div className="landing-elements landing-elements-8"></div>
+        <div className="landing-elements landing-elements-9"></div>
         <div className="landing-page">
           <div className="landing-page-heading">
-            Get started with your calls
+           <p> Get started  with <br/> your calls</p>
           </div>
           <div className="landing-page-para">
             Our calls are peer to peer and smoother than average video calls
