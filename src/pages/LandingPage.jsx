@@ -1,9 +1,13 @@
-import React, {useState} from "react";
+import React, {useState, useContext,createContext} from "react";
+import { useNavigate } from "react-router-dom";
+import { SocketContext } from "../SocketContext";
 import "./LandingPage.scss";
 import gif from "../lottie/landing.gif";
 import {AiOutlineGithub, AiOutlineCodepen, AiOutlineMail} from 'react-icons/ai'
+const LandingPageContext = createContext();
 
 function LandingPage() {
+  const history = useNavigate();
   const [userName, setUserName] = useState(""); 
   const change = () => {
     document
@@ -22,9 +26,15 @@ function LandingPage() {
   };
 
   const clickSound = () => {
-    console.log(userName);
     const audio = new Audio(require("../sound/click2.wav"));
     audio.play();
+
+    if(userName !== ""){
+      localStorage.setItem("userName", userName);
+      const path = "/video"
+      history(path);
+      window.location.reload();
+    }
    
   };
 
@@ -32,9 +42,8 @@ function LandingPage() {
     setUserName(e.target.value);
   }
 
-
-
   return (
+    <LandingPageContext.Provider value={{userName}}>
     <div className="main">
       <div className="landing">
         <div className="landing-elements landing-elements-1"></div>
@@ -89,9 +98,10 @@ function LandingPage() {
          </div>
       </div>
     </div>
+    </LandingPageContext.Provider>
   );
 }
 
 
-
 export default LandingPage;
+export {LandingPageContext};

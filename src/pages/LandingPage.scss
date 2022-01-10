@@ -18,8 +18,7 @@
       position: absolute;
       width: 60px;
       height: 60px;
-      border: solid 5px #091414fb;
-     // animation: rotate 5s linear infinite;
+      border: solid 5px #040808c0;
       transform: translate(-50%,-50%);
       &-1{  
           top:40%;
@@ -185,6 +184,7 @@
     bottom: -25%;
     right: 30%;
     margin-top: 2rem;
+    display:inline-block;
     width: 15%;
     padding: 1rem 3rem;
     font-size: 1.3rem;
@@ -193,7 +193,9 @@
     border: none;
     border-radius: 2rem;
     outline: none;
-
+   animation: button 4s ease;
+ 
+  
     cursor: pointer;
     transition: all 0.2s ease;
     &:hover {
@@ -329,5 +331,20 @@
     to{
         transform: translateY(-80px) scale(1.2) rotate(360deg) ;
         opacity: 0;
+    }
+}
+
+@keyframes button{
+    0%{
+        transform: scale(.6) translateY(100px) ;
+        opacity: 0;
+    }
+
+    50%{
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1) translateY(0px);
+        opacity: 1;
     }
 }
