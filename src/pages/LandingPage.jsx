@@ -1,19 +1,10 @@
-import React from "react";
+import React, {useState} from "react";
 import "./LandingPage.scss";
-import lottie from "lottie-web";
-import animationData from "../lottie/videoAnimation3.json";
+import gif from "../lottie/landing.gif";
 import {AiOutlineGithub, AiOutlineCodepen, AiOutlineMail} from 'react-icons/ai'
 
 function LandingPage() {
-  React.useEffect(() => {
-    lottie.loadAnimation({
-      container: document.querySelector(".animation"),
-      renderer: "svg",
-      loop: true,
-      autoplay: true,
-      animationData: animationData,
-    });
-  });
+  const [userName, setUserName] = useState(""); 
   const change = () => {
     document
       .getElementById("anim")
@@ -31,10 +22,17 @@ function LandingPage() {
   };
 
   const clickSound = () => {
-    console.log("click");
+    console.log(userName);
     const audio = new Audio(require("../sound/click2.wav"));
     audio.play();
+   
   };
+
+  const inputEvent = (e) => {
+    setUserName(e.target.value);
+  }
+
+
 
   return (
     <div className="main">
@@ -48,7 +46,7 @@ function LandingPage() {
             that you do at home.
           </div>
           <div className="landing-page-text">
-            <input type="text" className="landing-page-input" required></input>
+            <input type="text" className="landing-page-input" required  onChange={(e) => inputEvent(e)} ></input>
             <span className="landing-page-placeholder"> Enter Name</span>
           </div>
           <button
@@ -69,7 +67,9 @@ function LandingPage() {
             </span>
           </button>
         </div>
-        <div className="animation"></div>
+        <div className="animation">
+          <img src={gif} alt="gif" />
+        </div>
       </div>
       <div className="footer">
          <p className="footer-name">Made by Pranoy Sarkar</p>
