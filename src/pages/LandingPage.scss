@@ -12,6 +12,7 @@
   justify-content: center;
   flex-wrap: wrap;
   flex: 2 1 auto;
+
 }
 .animation {
   flex-shrink: 2 1 auto;
@@ -19,7 +20,6 @@
 }
 .landing-page {
   flex: 3 2 auto;
-
   max-width: 100vw;
   background-color: #161d1d;
   display: flex;
@@ -27,6 +27,17 @@
   justify-content: center;
   position: relative;
   padding-left: 10rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #161d1d;
+    width: 100%;
+    height: 100%;
+    animation: text-reveal 2.5s ease forwards;
+  }
 
   &-heading {
     margin-bottom: 2rem;
@@ -36,6 +47,7 @@
     font-style: bold;
     background: -webkit-linear-gradient(45deg, #087ee1, #05e8ba);
     background-clip: text;
+    animation: text 3.2s ease forwards;
     -webkit-text-fill-color: transparent;
   }
 
@@ -44,12 +56,15 @@
     font-weight: 200;
     color: aliceblue;
     font-size: 1.3rem;
+    animation: text 2.8s ease forwards;
     word-spacing: 0.2rem;
   }
   &-text {
     position: relative;
     width: 40%;
     margin-top: 3rem;
+    animation: text 2.5s ease forwards;
+    
   }
 
   &-input {
@@ -135,7 +150,7 @@
 .animation {
   margin-right: 5%;
   width: 30%;
-  img{
+  img {
     width: 100%;
     height: 100%;
   }
@@ -206,4 +221,26 @@
   100% {
     transform: translateX(0px);
   }
+}
+
+@keyframes text-reveal{
+    0%{
+        opacity: 100;
+        transform: translateY(0px);
+
+    }
+    100%{
+        opacity: 0.2;
+        transform: translateY(-500px);
+
+    }
+}
+
+@keyframes text{
+    to{
+        transform: translateY(0px);
+    }
+    from{
+        transform: translateY(20px);
+    }
 }
