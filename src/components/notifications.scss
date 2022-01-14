@@ -1,0 +1,44 @@
+.call-modal{
+    position: absolute;
+    background: #292a2a;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    padding: 1rem;
+    border-radius: 1.2rem;
+    h1{
+        color: rgb(133, 225, 166);
+        word-spacing: .2rem;
+        margin-bottom: 1rem;
+    }
+
+    img{
+        width: 50%;
+    }
+
+    h2{
+        font-size: 2rem;
+        margin: 1rem;
+      
+    }
+
+    p{
+        display: inline-block;
+    }
+
+    button{
+        display: block;
+        color:aliceblue;
+        cursor: pointer;
+        width:70%;
+        border-radius: 1rem;
+        border: none;
+        outline: none;
+        background:rgb(80, 200, 120);
+        padding:1rem;
+    }
+}

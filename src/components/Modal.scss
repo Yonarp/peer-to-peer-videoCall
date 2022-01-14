@@ -107,6 +107,28 @@
   cursor: pointer;
   transition: all 0.2s ease;
 
+  &-leave{
+    background: #a83c3c;
+    color: aliceblue;
+    border: none;
+    margin-top: 1.5rem;
+    outline: none;
+    font-weight: 400;
+    font-size: 1.2rem;
+    width: 25vw;
+    text-align: center;
+    outline: none;
+    padding: 1rem 2rem;
+    border-radius: 1.3rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &-icon{
+        font-size: 1.5rem;
+        color: #e5f0e8;
+    }
+  }
+
   &:hover {
     transform: translateY(-5px);
     box-shadow: -0.2rem 1rem 0.5rem rgba(15, 200, 176, 0.2);
