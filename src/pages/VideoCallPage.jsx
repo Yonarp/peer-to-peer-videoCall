@@ -24,7 +24,6 @@ function VideoCallPage() {
             <p className = "detail">   {me}</p>
           </div>
       </div>
-      <div className="header">Video Chat trial</div>
       <div className="wrapper">
         <VideoPlayer className="video-player" />
         <Options className="options">
