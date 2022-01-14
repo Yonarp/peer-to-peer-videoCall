@@ -7,14 +7,7 @@ const Options = ({ children }) => {
   const [idToCall, setIdToCall] = useState("");
   return (
     <div>
-      <input
-        label="enter Your name here"
-        value={name}
-        onChange={(e) => {
-          setName(e.target.value);
-        }}
-      ></input>
-      <h2>{me}</h2>
+  
       <h2>Make a call</h2>
       <input
         placeholder="enter id to call"

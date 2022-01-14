@@ -1,6 +1,5 @@
 import React, {useState, useContext,createContext} from "react";
 import { useNavigate } from "react-router-dom";
-import { SocketContext } from "../SocketContext";
 import "./LandingPage.scss";
 import gif from "../lottie/landing.gif";
 import {AiOutlineGithub, AiOutlineCodepen, AiOutlineMail} from 'react-icons/ai'
