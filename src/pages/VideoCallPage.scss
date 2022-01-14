@@ -9,28 +9,31 @@
 }
 
     .details{
-       background-color:rgb(38, 42, 42);
+       background-color:none;
         width:fit-content;
         border-radius: 1rem;
         transform: translate(-50%,-50%);
         position: absolute;
         top: 11%;
         left:15%;
-        font-size: 1.2rem;
-        box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+        font-size: 1.4rem;
+       // box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
         padding: 2rem 4rem;
     }
 
     .detail {
-        background-color:#1b2020;
+        background-color:#0C9DAA;
+        font-weight: 200;
+        font-style: italic;
         margin-left: .5rem;
+        font-size: 1.1rem;
         padding: .5rem 1rem;
         border-radius: .5rem;
-        box-shadow: 10px 10px 10px rgba(0,0,0,0.3);
+        box-shadow: 10px 10px 4px rgba(0,0,0,0.2);
     }
 
     .logo{
-        color: $dark-teal;
+        color: aliceblue;
         background-color:transparent;
     }
 

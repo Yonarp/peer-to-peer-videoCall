@@ -16,12 +16,12 @@ function VideoCallPage() {
           <p className = "logo"><BsFillPersonFill/> : </p>
           <p className = "detail">
             {" "}
-             &nbsp; {name}
+              {name}
           </p>
           </div>
           <div className="id">
             <p className = "logo">I D :</p>
-            <p className = "detail">  &nbsp; {me}</p>
+            <p className = "detail">   {me}</p>
           </div>
       </div>
       <div className="header">Video Chat trial</div>
